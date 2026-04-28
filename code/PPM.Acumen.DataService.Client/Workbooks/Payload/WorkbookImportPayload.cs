@@ -15,6 +15,9 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("workbook")]
         public WorkbookPayloadDto Workbook { get; set; } = new WorkbookPayloadDto();
 
+        [JsonProperty("riskEventTemplate")]
+        public RiskEventTemplatePayloadDto? RiskEventTemplate { get; set; }
+
         [JsonProperty("riskRegisters")]
         public List<RiskRegisterPayloadDto> RiskRegisters { get; set; } = new List<RiskRegisterPayloadDto>();
 

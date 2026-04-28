@@ -8,9 +8,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("rowUid")]
         public Guid RowUid { get; set; }
 
-        [JsonProperty("resourceId")]
-        public string? ResourceId { get; set; }
-
         [JsonProperty("sourceId")]
         public string? SourceId { get; set; }
 
@@ -25,8 +22,5 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("pricePerUnit")]
         public double? PricePerUnit { get; set; }
-
-        [JsonProperty("calendarUid")]
-        public Guid? CalendarUid { get; set; }
     }
 }

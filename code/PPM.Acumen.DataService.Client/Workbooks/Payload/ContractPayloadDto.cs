@@ -11,28 +11,34 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("street")]
-        public string? Street { get; set; }
+        [JsonProperty("number")]
+        public string? Number { get; set; }
 
-        [JsonProperty("city")]
-        public string? City { get; set; }
+        [JsonProperty("programName")]
+        public string? ProgramName { get; set; }
 
-        [JsonProperty("state")]
-        public string? State { get; set; }
+        [JsonProperty("programPhase")]
+        public string? ProgramPhase { get; set; }
 
-        [JsonProperty("country")]
-        public string? Country { get; set; }
+        [JsonProperty("proprietaryStatement")]
+        public string? ProprietaryStatement { get; set; }
 
-        [JsonProperty("postcode")]
-        public string? Postcode { get; set; }
+        [JsonProperty("securityClassification")]
+        public string? SecurityClassification { get; set; }
 
-        [JsonProperty("contactName")]
-        public string? ContactName { get; set; }
+        [JsonProperty("contractType")]
+        public string? ContractType { get; set; }
 
-        [JsonProperty("contactPhone")]
-        public string? ContactPhone { get; set; }
+        [JsonProperty("contractTaskOrEffortName")]
+        public string? ContractTaskOrEffortName { get; set; }
 
-        [JsonProperty("contactEmail")]
-        public string? ContactEmail { get; set; }
+        [JsonProperty("evmsAccepted")]
+        public bool? EvmsAccepted { get; set; }
+
+        [JsonProperty("evmsAcceptanceDate")]
+        public DateTime? EvmsAcceptanceDate { get; set; }
+
+        [JsonProperty("reportingPeriodEndDate")]
+        public DateTime? ReportingPeriodEndDate { get; set; }
     }
 }

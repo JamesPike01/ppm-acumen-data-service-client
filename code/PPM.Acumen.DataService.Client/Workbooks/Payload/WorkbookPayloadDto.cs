@@ -11,15 +11,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("title")]
-        public string? Title { get; set; }
-
-        [JsonProperty("subject")]
-        public string? Subject { get; set; }
-
-        [JsonProperty("author")]
-        public string? Author { get; set; }
-
         [JsonProperty("fileVersion")]
         public string? FileVersion { get; set; }
 
@@ -82,5 +73,8 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("scoreMetricUid")]
         public Guid? ScoreMetricUid { get; set; }
+
+        [JsonProperty("riskEventTemplateUid")]
+        public Guid? RiskEventTemplateUid { get; set; }
     }
 }

@@ -12,9 +12,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("libraryType")]
         public string? LibraryType { get; set; }
 
-        [JsonProperty("name")]
-        public string? Name { get; set; }
-
         [JsonProperty("groups")]
         public List<MetricGroupPayloadDto> Groups { get; set; } = new List<MetricGroupPayloadDto>();
     }

@@ -114,26 +114,14 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("lastImportDate")]
         public DateTime? LastImportDate { get; set; }
 
+        [JsonProperty("type")]
+        public string Type { get; set; } = "Live";
+
         [JsonProperty("projectType")]
-        public string ProjectType { get; set; } = "Live";
+        public string? ProjectType { get; set; }
 
         [JsonProperty("parentProjectUid")]
         public Guid? ParentProjectUid { get; set; }
-
-        [JsonProperty("snapshotDate")]
-        public DateTime? SnapshotDate { get; set; }
-
-        [JsonProperty("scenarioType")]
-        public string? ScenarioType { get; set; }
-
-        [JsonProperty("scenarioPercentile")]
-        public double? ScenarioPercentile { get; set; }
-
-        [JsonProperty("scenarioStartFieldName")]
-        public string? ScenarioStartFieldName { get; set; }
-
-        [JsonProperty("scenarioFinishFieldName")]
-        public string? ScenarioFinishFieldName { get; set; }
 
         [JsonProperty("locations")]
         public string? Locations { get; set; }

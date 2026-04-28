@@ -26,8 +26,17 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("postcode")]
         public string? Postcode { get; set; }
 
+        [JsonProperty("idCode")]
+        public string? IdCode { get; set; }
+
+        [JsonProperty("idType")]
+        public string? IdType { get; set; }
+
         [JsonProperty("contactName")]
         public string? ContactName { get; set; }
+
+        [JsonProperty("contactTitle")]
+        public string? ContactTitle { get; set; }
 
         [JsonProperty("contactPhone")]
         public string? ContactPhone { get; set; }
