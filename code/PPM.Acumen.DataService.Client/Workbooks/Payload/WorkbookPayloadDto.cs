@@ -71,9 +71,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("cloudProjectTypeId")]
         public string? CloudProjectTypeId { get; set; }
 
-        [JsonProperty("scoreMetricUid")]
-        public Guid? ScoreMetricUid { get; set; }
-
         [JsonProperty("riskEventTemplateUid")]
         public Guid? RiskEventTemplateUid { get; set; }
     }

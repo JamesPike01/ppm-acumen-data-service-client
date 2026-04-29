@@ -21,8 +21,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("thresholds")]
         public List<RiskThresholdPayloadDto> Thresholds { get; set; } = new List<RiskThresholdPayloadDto>();
 
-        [JsonProperty("udfDefinitions")]
-        public List<RiskEventTemplateUdfPayloadDto> UdfDefinitions { get; set; } = new List<RiskEventTemplateUdfPayloadDto>();
     }
 
     public class RiskImpactPayloadDto
@@ -87,9 +85,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("rowUid")]
         public Guid RowUid { get; set; }
 
-        [JsonProperty("riskImpactUid")]
-        public Guid RiskImpactUid { get; set; }
-
         [JsonProperty("impactName")]
         public string? ImpactName { get; set; }
 
@@ -112,18 +107,4 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         public int DisplayOrder { get; set; }
     }
 
-    public class RiskEventTemplateUdfPayloadDto
-    {
-        [JsonProperty("rowUid")]
-        public Guid RowUid { get; set; }
-
-        [JsonProperty("udfIndex")]
-        public int UdfIndex { get; set; }
-
-        [JsonProperty("name")]
-        public string? Name { get; set; }
-
-        [JsonProperty("isEnabled")]
-        public bool IsEnabled { get; set; }
-    }
 }

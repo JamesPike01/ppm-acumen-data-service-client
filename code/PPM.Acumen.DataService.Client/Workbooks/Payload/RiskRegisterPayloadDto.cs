@@ -12,8 +12,29 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("name")]
         public string? Name { get; set; }
 
+        [JsonProperty("udfDefinitions")]
+        public List<RiskRegisterUdfPayloadDto> UdfDefinitions { get; set; } = new List<RiskRegisterUdfPayloadDto>();
+
+        [JsonProperty("weatherEvents")]
+        public List<WeatherEventPayloadDto> WeatherEvents { get; set; } = new List<WeatherEventPayloadDto>();
+
         [JsonProperty("events")]
         public List<RiskEventPayloadDto> Events { get; set; } = new List<RiskEventPayloadDto>();
+    }
+
+    public class RiskRegisterUdfPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("udfIndex")]
+        public int UdfIndex { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("isEnabled")]
+        public bool IsEnabled { get; set; }
     }
 
     public class RiskEventPayloadDto

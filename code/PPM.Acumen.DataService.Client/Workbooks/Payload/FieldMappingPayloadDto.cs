@@ -25,5 +25,20 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("isBaseline")]
         public bool IsBaseline { get; set; }
+
+        [JsonProperty("isWork")]
+        public bool IsWork { get; set; }
+
+        [JsonProperty("isDuration")]
+        public bool IsDuration { get; set; }
+
+        [JsonProperty("isCost")]
+        public bool IsCost { get; set; }
+
+        [JsonProperty("isPercent")]
+        public bool IsPercent { get; set; }
+
+        [JsonProperty("loadingType")]
+        public string? LoadingType { get; set; }
     }
 }

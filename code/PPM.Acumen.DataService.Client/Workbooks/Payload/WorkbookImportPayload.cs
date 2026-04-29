@@ -38,8 +38,5 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("metricLibraries")]
         public List<MetricLibraryPayloadDto> MetricLibraries { get; set; } = new List<MetricLibraryPayloadDto>();
-
-        [JsonProperty("scoreMetric")]
-        public ScoreMetricPayloadDto? ScoreMetric { get; set; }
     }
 }

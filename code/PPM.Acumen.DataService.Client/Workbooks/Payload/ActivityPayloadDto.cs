@@ -192,16 +192,10 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("resourceAssignments")]
         public List<ResourceAssignmentPayloadDto> ResourceAssignments { get; set; } = new List<ResourceAssignmentPayloadDto>();
 
-        [JsonProperty("forecasts")]
-        public List<ActivityForecastPayloadDto>? Forecasts { get; set; }
-
         [JsonProperty("userFieldValues")]
-        public UserFieldValuesPayloadDto? UserFieldValues { get; set; }
+        public Dictionary<string, string>? UserFieldValues { get; set; }
 
         [JsonProperty("userCodeValues")]
         public List<UserCodeValuePayloadDto> UserCodeValues { get; set; } = new List<UserCodeValuePayloadDto>();
-
-        [JsonProperty("userNoteValues")]
-        public List<UserNoteValuePayloadDto> UserNoteValues { get; set; } = new List<UserNoteValuePayloadDto>();
     }
 }

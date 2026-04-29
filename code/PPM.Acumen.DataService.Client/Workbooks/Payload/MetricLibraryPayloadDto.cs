@@ -21,6 +21,9 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("rowUid")]
         public Guid RowUid { get; set; }
 
+        [JsonProperty("parentGroupUid")]
+        public Guid? ParentGroupUid { get; set; }
+
         [JsonProperty("name")]
         public string? Name { get; set; }
 
@@ -39,19 +42,82 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("name")]
         public string? Name { get; set; }
 
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
         [JsonProperty("weight")]
         public double? Weight { get; set; }
 
         [JsonProperty("includeInNewWorkbook")]
         public bool IncludeInNewWorkbook { get; set; }
 
-        [JsonProperty("filterExpression")]
-        public string? FilterExpression { get; set; }
+        [JsonProperty("columnFields")]
+        public List<string>? ColumnFields { get; set; }
 
-        [JsonProperty("columnDefinitions")]
-        public string? ColumnDefinitions { get; set; }
+        [JsonProperty("filters")]
+        public List<MetricFilterPayloadDto> Filters { get; set; } = new List<MetricFilterPayloadDto>();
+    }
 
-        [JsonProperty("displayOrder")]
-        public int DisplayOrder { get; set; }
+    public class MetricFilterPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("filterType")]
+        public string? FilterType { get; set; }
+
+        [JsonProperty("includeNormal")]
+        public bool IncludeNormal { get; set; }
+
+        [JsonProperty("includeMilestone")]
+        public bool IncludeMilestone { get; set; }
+
+        [JsonProperty("includeSummary")]
+        public bool IncludeSummary { get; set; }
+
+        [JsonProperty("includeHammock")]
+        public bool IncludeHammock { get; set; }
+
+        [JsonProperty("includePlanned")]
+        public bool IncludePlanned { get; set; }
+
+        [JsonProperty("includeInProgress")]
+        public bool IncludeInProgress { get; set; }
+
+        [JsonProperty("includeComplete")]
+        public bool IncludeComplete { get; set; }
+
+        [JsonProperty("timePhaseFilter")]
+        public string? TimePhaseFilter { get; set; }
+
+        [JsonProperty("phaseAnalysisBasis")]
+        public string? PhaseAnalysisBasis { get; set; }
+
+        [JsonProperty("prorateSwitch")]
+        public string? ProrateSwitch { get; set; }
+
+        [JsonProperty("definedColumns")]
+        public List<string>? DefinedColumns { get; set; }
+
+        [JsonProperty("expressions")]
+        public List<MetricFilterExpressionPayloadDto> Expressions { get; set; } = new List<MetricFilterExpressionPayloadDto>();
+    }
+
+    public class MetricFilterExpressionPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("leftField")]
+        public string? LeftField { get; set; }
+
+        [JsonProperty("rightField")]
+        public string? RightField { get; set; }
+
+        [JsonProperty("operation")]
+        public string? Operation { get; set; }
+
+        [JsonProperty("wbsUid")]
+        public Guid? WbsUid { get; set; }
     }
 }
