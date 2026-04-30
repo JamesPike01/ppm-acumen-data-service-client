@@ -40,11 +40,5 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("templateName")]
         public string? TemplateName { get; set; }
-
-        [JsonProperty("correlationCoefficient")]
-        public double? CorrelationCoefficient { get; set; }
-
-        [JsonProperty("correlationParentUid")]
-        public Guid? CorrelationParentUid { get; set; }
     }
 }

@@ -197,5 +197,26 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("userCodeValues")]
         public List<UserCodeValuePayloadDto> UserCodeValues { get; set; } = new List<UserCodeValuePayloadDto>();
+
+        [JsonProperty("calibration")]
+        public ActivityCalibrationPayloadDto? Calibration { get; set; }
+    }
+
+    public class ActivityCalibrationPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("isEnabled")]
+        public bool IsEnabled { get; set; }
+
+        [JsonProperty("useFactor")]
+        public bool UseFactor { get; set; }
+
+        [JsonProperty("factor")]
+        public double Factor { get; set; }
+
+        [JsonProperty("templateFactorIndex")]
+        public int? TemplateFactorIndex { get; set; }
     }
 }

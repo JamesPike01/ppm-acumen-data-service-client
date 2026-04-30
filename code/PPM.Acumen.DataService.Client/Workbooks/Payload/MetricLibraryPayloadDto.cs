@@ -120,4 +120,79 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("wbsUid")]
         public Guid? WbsUid { get; set; }
     }
+
+    public class MetricVariablePayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("parentVariableUid")]
+        public Guid? ParentVariableUid { get; set; }
+
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
+        [JsonProperty("isFieldVariable")]
+        public bool IsFieldVariable { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("value")]
+        public string? Value { get; set; }
+    }
+
+    public class ProjectVariablePayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("description")]
+        public string? Description { get; set; }
+
+        [JsonProperty("type")]
+        public string? Type { get; set; }
+    }
+
+    public class ProjectVariableValuePayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("projectVariableUid")]
+        public Guid ProjectVariableUid { get; set; }
+
+        [JsonProperty("value")]
+        public string? Value { get; set; }
+    }
+
+    public class CalculatedFieldPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("description")]
+        public string? Description { get; set; }
+
+        [JsonProperty("operatesOn")]
+        public string? OperatesOn { get; set; }
+
+        [JsonProperty("formula")]
+        public string? Formula { get; set; }
+
+        [JsonProperty("displayFormat")]
+        public string? DisplayFormat { get; set; }
+    }
 }

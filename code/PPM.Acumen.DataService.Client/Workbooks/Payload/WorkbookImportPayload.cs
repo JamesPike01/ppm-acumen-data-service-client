@@ -38,5 +38,23 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("metricLibraries")]
         public List<MetricLibraryPayloadDto> MetricLibraries { get; set; } = new List<MetricLibraryPayloadDto>();
+
+        [JsonProperty("calculatedFields")]
+        public List<CalculatedFieldPayloadDto> CalculatedFields { get; set; } = new List<CalculatedFieldPayloadDto>();
+
+        [JsonProperty("projectVariables")]
+        public List<ProjectVariablePayloadDto> ProjectVariables { get; set; } = new List<ProjectVariablePayloadDto>();
+
+        [JsonProperty("metricVariables")]
+        public List<MetricVariablePayloadDto> MetricVariables { get; set; } = new List<MetricVariablePayloadDto>();
+
+        [JsonProperty("riskAdvise")]
+        public List<RiskAdvisePayloadDto> RiskAdvise { get; set; } = new List<RiskAdvisePayloadDto>();
+
+        [JsonProperty("activityCorrelations")]
+        public List<ActivityCorrelationPayloadDto> ActivityCorrelations { get; set; } = new List<ActivityCorrelationPayloadDto>();
+
+        [JsonProperty("weatherEvents")]
+        public List<WeatherEventPayloadDto> WeatherEvents { get; set; } = new List<WeatherEventPayloadDto>();
     }
 }

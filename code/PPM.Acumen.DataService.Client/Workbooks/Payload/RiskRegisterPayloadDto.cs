@@ -93,9 +93,6 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("correlationCoefficient")]
         public double? CorrelationCoefficient { get; set; }
 
-        [JsonProperty("weatherEventUid")]
-        public Guid? WeatherEventUid { get; set; }
-
         [JsonProperty("projectType")]
         public string? ProjectType { get; set; }
 

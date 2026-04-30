@@ -174,5 +174,8 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("links")]
         public List<ActivityLinkPayloadDto> Links { get; set; } = new List<ActivityLinkPayloadDto>();
 
+        [JsonProperty("projectVariableValues")]
+        public List<ProjectVariableValuePayloadDto> ProjectVariableValues { get; set; } = new List<ProjectVariableValuePayloadDto>();
+
     }
 }
