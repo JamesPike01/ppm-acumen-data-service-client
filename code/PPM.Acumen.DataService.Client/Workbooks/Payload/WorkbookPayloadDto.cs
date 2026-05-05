@@ -73,5 +73,8 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("riskEventTemplateUid")]
         public Guid? RiskEventTemplateUid { get; set; }
+
+        [JsonProperty("scriptLibraryUid")]
+        public Guid? ScriptLibraryUid { get; set; }
     }
 }

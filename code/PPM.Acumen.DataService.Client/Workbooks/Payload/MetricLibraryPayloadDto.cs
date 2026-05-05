@@ -108,6 +108,9 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("rowUid")]
         public Guid RowUid { get; set; }
 
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
         [JsonProperty("leftField")]
         public string? LeftField { get; set; }
 

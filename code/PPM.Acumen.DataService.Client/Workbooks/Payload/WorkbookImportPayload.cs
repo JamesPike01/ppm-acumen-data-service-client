@@ -36,6 +36,12 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("selectionSets")]
         public List<SelectionSetPayloadDto> SelectionSets { get; set; } = new List<SelectionSetPayloadDto>();
 
+        [JsonProperty("ribbonViews")]
+        public List<RibbonViewPayloadDto> RibbonViews { get; set; } = new List<RibbonViewPayloadDto>();
+
+        [JsonProperty("scriptLibrary")]
+        public ScriptLibraryPayloadDto? ScriptLibrary { get; set; }
+
         [JsonProperty("metricLibraries")]
         public List<MetricLibraryPayloadDto> MetricLibraries { get; set; } = new List<MetricLibraryPayloadDto>();
 
@@ -56,5 +62,11 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("weatherEvents")]
         public List<WeatherEventPayloadDto> WeatherEvents { get; set; } = new List<WeatherEventPayloadDto>();
+
+        [JsonProperty("weatherWindows")]
+        public List<WeatherWindowPayloadDto> WeatherWindows { get; set; } = new List<WeatherWindowPayloadDto>();
+
+        [JsonProperty("delayPenalties")]
+        public List<DelayPenaltyPayloadDto> DelayPenalties { get; set; } = new List<DelayPenaltyPayloadDto>();
     }
 }
