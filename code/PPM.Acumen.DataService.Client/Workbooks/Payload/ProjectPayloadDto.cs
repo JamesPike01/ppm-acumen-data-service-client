@@ -156,6 +156,9 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("baselines")]
         public List<ProjectBaselinePayloadDto> Baselines { get; set; } = new List<ProjectBaselinePayloadDto>();
 
+        [JsonProperty("mergeSource")]
+        public ProjectBaselinePayloadDto? MergeSource { get; set; }
+
         [JsonProperty("fieldMappings")]
         public List<FieldMappingPayloadDto> FieldMappings { get; set; } = new List<FieldMappingPayloadDto>();
 

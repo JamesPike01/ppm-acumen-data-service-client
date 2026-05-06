@@ -14,6 +14,9 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
         [JsonProperty("filePath")]
         public string? FilePath { get; set; }
 
+        [JsonProperty("mergeField")]
+        public string? MergeField { get; set; }
+
         [JsonProperty("p6WebObjectId")]
         public int? P6WebObjectId { get; set; }
 

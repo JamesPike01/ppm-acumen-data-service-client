@@ -56,6 +56,33 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("filters")]
         public List<MetricFilterPayloadDto> Filters { get; set; } = new List<MetricFilterPayloadDto>();
+
+        [JsonProperty("thresholds")]
+        public List<MetricThresholdPayloadDto> Thresholds { get; set; } = new List<MetricThresholdPayloadDto>();
+    }
+
+    public class MetricThresholdPayloadDto
+    {
+        [JsonProperty("rowUid")]
+        public Guid RowUid { get; set; }
+
+        [JsonProperty("displayOrder")]
+        public int DisplayOrder { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("description")]
+        public string? Description { get; set; }
+
+        [JsonProperty("minValue")]
+        public double MinValue { get; set; }
+
+        [JsonProperty("color")]
+        public string? Color { get; set; }
+
+        [JsonProperty("isFail")]
+        public bool IsFail { get; set; }
     }
 
     public class MetricFilterPayloadDto
