@@ -68,5 +68,14 @@ namespace PPM.Acumen.DataService.Client.Workbooks.Payload
 
         [JsonProperty("delayPenalties")]
         public List<DelayPenaltyPayloadDto> DelayPenalties { get; set; } = new List<DelayPenaltyPayloadDto>();
+
+        /// <summary>
+        /// Per-workbook preference values (ENTITY-scoped to this workbook or one of its projects, or USER-scoped).
+        /// APP- and MODULE-scoped values are seeded centrally and do not travel in the workbook payload.
+        /// PreferenceDefinitions themselves are global and excluded from this payload — they are managed
+        /// independently and seeded centrally.
+        /// </summary>
+        [JsonProperty("preferences")]
+        public List<PreferenceValuePayloadDto> Preferences { get; set; } = new List<PreferenceValuePayloadDto>();
     }
 }
